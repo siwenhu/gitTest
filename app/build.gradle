@@ -37,6 +37,10 @@ android {
     }
 }
 
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_hh-mm-ss", TimeZone.getTimeZone("GMT+08:00"))
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
